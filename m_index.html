@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Toronto Choral Society</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="mobile/css/style.css">
+<link rel="stylesheet" href="mobile/css/reset.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    }
+    if(!isMobile()){
+        document.location = "index.html"
+    }
+</script>
+<script src="mobile/js/main.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+	<header id="header">
+        <div class="logo">
+            <h1><a href="">TCS</a></h1>
+        </div>
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <a href="">ABOUT</a>
+                    <ul>
+                        <li><a href="">ABOUT US</a></li>
+                        <li><a href="">GEOFFERY BUTLER</a></li>
+                        <li><a href="">WILLIAM O'MERA</a></li>
+                        <li><a href="">HISTORY</a></li>
+                        <li><a href="">BOARD OF DIRECTORS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">NEWS</a>
+                    <ul>
+                        <li><a href="">TCS NEWS</a></li>
+                        <li><a href="">TCS IN MEDIA</a></li>
+                        <li><a href="">BLOG</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">CONCERTS</a>
+                    <ul>
+                        <li><a href="">2021-22 CONCERTS</a></li>
+                        <li><a href="">GALLERY</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">TICKETS</a>
+                    <ul>
+                        <li><a href="">CONCERT TICKETS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">CHOIRS</a>
+                    <ul>
+                        <li><a href="">TORONTO CHORAL SOCIETY</a></li>
+                        <li><a href="">NORTH 44° ENSEMBLE</a></li>
+                        <li><a href="">THE TCS SISTER CHOIR</a></li>
+                        <li><a href="">TCS MEMBERS ONLY</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">JOIN TCS</a>
+                    <ul>
+                        <li><a href="">BECOME A MEMBER</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="tab">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+	</header>
+	<div class="main_text">
+		<div class="slogan">
+			<strong>TORONTO<br>CHORAL<br>SOCIETY</strong>
+		</div>
+		<div class="desc">
+			<span>When words fail, music speaks</span>
+		</div>
+	</div>
+	<div id="main_slider">
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="mobile/images/mainbg01.jpg" alt="main slider1">
+				</div>
+				<div class="swiper-slide">
+					<img src="mobile/images/mainbg02.jpg" alt="main slider2">
+				</div>
+				<div class="swiper-slide">
+					<img src="mobile/images/mainbg03.jpg" alt="main slider3">
+				</div>
+				<div class="swiper-slide">
+					<img src="mobile/images/mainbg04.jpg" alt="main slider4">
+				</div>
+				<div class="swiper-slide">
+					<img src="mobile/images/mainbg05.jpg" alt="main slider1">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+            <div class="controller"><a href="" id="pause_play" class="pause">pause</a></div>
+		</div>
+	</div>
+    <div class="utils">
+        <div class="button">
+            <div class="letter_btn"><a href="">NEWSLETTER</a></div>
+            <div class="member_btn"><a href="">MEMBER'S ONLY</a></div>
+        </div>
+        <div class="form">
+            <div class="letter">
+                <div class="title">Newsletter Signup</div>
+                <form>
+                    <div class="name">
+                       <input type="text" placeholder="Name">
+                    </div>
+                    <div class="email">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <input type="submit" value="SIGN UP">
+                </form>
+            <div class="close"><a href="">BACK TO MAIN</a></div>
+
+            </div>
+            <div class="member">
+                <div class="title">Sign In</div>
+                <form>
+                    <div class="email">
+                       <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="password">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="JOIN">
+                </form>
+                <div class="close"><a href="">BACK TO MAIN</a></div>
+            </div>
+       </div>
+    </div>
+
+    <section id="page1">
+        <div class="title"><h3>Stay In Touch<br> with TCS</h></div>
+        <div class="sns clearfix">
+            <ul>
+                <li><a href=""><img src="mobile/images/youtube.png" alt="youtube"></a></li>
+                <li><a href=""><img src="mobile/images/facebook.png" alt="facebook"></a></li>
+                <li><a href=""><img src="mobile/images/insta.png" alt="instagram"></a></li>
+                <li><a href=""><img src="mobile/images/twitter.png" alt="twitter"></a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="page2">
+        <div class="title">
+            <h3>CONCERT DONOR</h3>
+            <p>ALL Donors receive:<br>Name recognition in the Concert Program<br>Charitable donation receipt(where applicable)</p>
+        </div>
+        <div id="donor_slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img src="mobile/images/donor1.jpg" alt="donor1">
+                      <div class="desc">
+                          <dl>
+                              <dt>TCS AMBASSADOR</dt>
+                              <dd>$500 and Up</dd>
+                          </dl>
+                      </div>
+                    </div>
+                  <div class="swiper-slide">
+                      <img src="mobile/images/donor2.jpg" alt="donor2">
+                      <div class="desc">
+                        <dl>
+                            <dt>TCS PATRON</dt>
+                            <dd>$250 and Up</dd>
+                        </dl>
+                    </div>
+                    </div>
+                  <div class="swiper-slide">
+                      <img src="mobile/images/donor3.jpg" alt="donor3">
+                      <div class="desc">
+                        <dl>
+                            <dt>CONDUCTOR’S CIRCLE</dt>
+                            <dd>$100 and Up</dd>
+                        </dl>
+                    </div>
+                    </div>
+                  <div class="swiper-slide">
+                    <img src="mobile/images/donor4.jpg" alt="donor4">
+                    <div class="desc">
+                        <dl>
+                            <dt>ARTISTS’ CIRCLE</dt>
+                            <dd>$25 and Up</dd>
+                        </dl>
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+    </section>
+    <section id="page3">
+        <div class="title">
+            <h3>SPONSORSHIP</h3>
+            <p>All Sponsors also receive:<br>
+            TCS Website logo recognition for the 2019-2020 concert season</p>
+        </div>
+        <div class="contents">
+            <ul>
+                <li>
+                    <img src="mobile/images/sponsor1.jpg" alt="sponsor1">
+                    <div class="desc">
+                        <dl>
+                            <dt>PRESENTATION SPONSOR</dt>
+                            <dd>$2500 and Up</dd>
+                        </dl>
+                        <a href="">MORE</a>
+                    </div>
+                    
+                </li>
+                <li>
+                    <img src="mobile/images/sponsor2.jpg" alt="sponsor2">
+                    <div class="desc left">
+                        <dl>
+                            <dt>PRESENTATION SPONSOR</dt>
+                            <dd>$2500 and Up</dd>
+                        </dl>
+                        <a href="">MORE</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="mobile/images/sponsor3.jpg" alt="sponsor3">
+                    <div class="desc">
+                        <dl>
+                            <dt>PRESENTATION SPONSOR</dt>
+                            <dd>$2500 and Up</dd>
+                        </dl>
+                        <a href="">MORE</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="page4">
+        <div class="banner clearfix">
+            <ul>
+                <li class="opera"><a href="">
+                    <div class="label">THE VERY<br>FIRST OPERA</div>
+                    <div class="desc">What would the world<br>like without opera</div>
+                </a></li>
+                <li class="peace"><a href="">
+                    <div class="label">ART<br>FOR PEACE</div>
+                    <div class="desc">Virtual Concert for Ukraine<br>March 15th @6:30 pm</div>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="page5">
+        <div class="title">
+            <h3>UPCOMING CONCERTS</h3>
+            <p>Check out TCS's upcoming concerts<br>STAY TUNED</p>
+        </div>
+        <div id="event_slider">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href=""><img src="mobile/images/event1.png" alt="banner1"></a>
+						<div class="desc">
+							<dl>
+								<dt>Mozart : Requiem</dt>
+								<dd>May 13, 2020</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<a href=""><img src="mobile/images/event2.png" alt="banner2"></a>
+						<div class="desc short">
+							<dl>
+								<dt>Celebration :<br>Beethoven 250 Years</dt>
+								<dd>Mar 28, 2020</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<a href=""><img src="mobile/images/event3.png" alt="banner3"></a>
+						<div class="desc short">
+							<dl>
+								<dt>Christmas Celebration</dt>
+								<dd>Dec 20, 2019</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+    </section>
+    <section id="page6">
+        <div class="notice">
+            <div class="news">
+                <p class="label">NEWS</p>
+                <ul>
+                    <li><a href="">Happy Birthday Bobby McFerrin</a></li>
+                    <li><a href="">After 177 Years, TCS know How to Handle Tough Times</a></li>
+                    <li><a href="">Mozart's Requiem - Shrouded in Mystery</a></li>
+                    <li><a href="">TCS Messiah Concert-Covid-Style</a></li>
+                </ul>
+            </div>
+            <div class="media">
+                <p class="label">MEDIA</p>
+                <ul>
+                    <li><a href="">Geoff Butler FM Interview 2019</a></li>
+                    <li><a href="">The TCS at Radio Voces Latinas</a></li>
+                    <li><a href="">The TCS at Radio Voces Latinas</a></li>
+                    <li><a href="">TCS Messiah Concert-Covid-Style</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="page7">
+        <div class="title">
+            <h3>Location</h3>
+        </div>
+        <div id="map"></div>
+        <script>
+            function initMap(){43.67791014156935, -79.35010807273353
+                const myLatLng={lat: 43.67791014156935, lng: -79.35010807273353};
+                const map=new google.maps.Map(document.getElementById("map"), {
+                    zoom: 18,
+                    center: myLatLng,
+                });
+                new google.maps.Marker({
+                    position: myLatLng,
+                    map,
+                    title: "Toronto Choral Society",
+                });
+            }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpBuYRQaFFOM1WHuLcqfurJw9Frx7Z4i0&callback=initMap" async defer></script>
+    </section>
+    <footer id="footer" class="clearfix">
+        <div class="flogo">Toronto Choral Society</div>
+        <div class="copy">
+            All Rights Reserved,<br>Toronto Choral Society 2020<bt>
+            #608 - 455 Danforth Ave., Toronto, ON M4K 1P1<br>
+            1-321-421-9799 | info@torontochoralsociety.org
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
