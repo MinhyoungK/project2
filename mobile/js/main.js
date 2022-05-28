@@ -1,127 +1,122 @@
-$(function(){
+window.addEventListener("load",()=>{
+	let html = document.querySelector("html");
+	let slideFlag = false;
+	let height;
+	let w;
+	let body = document.querySelector("body");
+	let header = document.querySelector("#header");
+	let tabBtn = header.querySelector(".tab");
+	let gnb = header.querySelector("#gnb");
+	let gnbLi = gnb.firstElementChild.children;
+	let mainSlider = document.querySelector("#main_slider");
+	let main_swiper = mainSlider.querySelector(".swiper");
+	let letter =mainSlider.querySelector(".letter");
+	let member =mainSlider.querySelector(".member");
+	let letterBtn = mainSlider.querySelector(".letter_btn").firstElementChild;
+	let memberBtn = mainSlider.querySelector(".member_btn").firstElementChild;
+	let letterCloseBtn = mainSlider.querySelectorAll(".close a")[0];
+	let memberCloseBtn = mainSlider.querySelectorAll(".close a")[1];
+	let donorSlider= document.querySelector("#donor_slider");
+	let donor_swiper= donorSlider.querySelector(".mySwiper");
+	let eventSlider= document.querySelector("#event_slider");
+	let event_swiper= eventSlider.querySelector(".mySwiper");
+	let vh = window.innerHeight;
 
-	var slideFlag=false;
+	main_swiper.style.height=vh+"px";
 
-  var mainSwiper = new Swiper("#main_slider .swiper", {
+	// main swiper
+	let mainSwiper = new Swiper(main_swiper, {
     speed:1200,
 		effect: "fade",
     fadeEffect:{
       crossFade:true
     },
-		navigation: {
-			nextEl: "#main_slider .swiper-button-next",
-			prevEl: "#main_slider .swiper-button-prev",
-		},
-		pagination: {
-          el: "#main_slider .swiper-pagination",
-        },
 		loop:true,
 		autoplay:{
 			delay:4000,
 		},
-    on:{
-		touchEnd:function(){
-			if(slideFlag){
-				$("#pause_play").removeAttr("class");
-				$("#pause_play").addClass("play");
-				slideFlag=true;
-			}
-			else{
-				return false;
-			}
-		},
-		sliderMove:function(){
-			if(slideFlag == false) slideFlag=true;
-		}
-	 },
-	});
-  $("#pause_play").click(function(e){
-    e.preventDefault();
-
-    if($(this).hasClass("play")==true){
-      $(this).removeAttr("class");
-      $(this).addClass("pause");
-      mainSwiper.autoplay.start();
-    }else{
-      $(this).removeAttr("class");
-      $(this).addClass("play");
-      mainSwiper.autoplay.stop();
-    }
-  });
-
-	var height;
-	$(window).scroll(function(){
-		height=$(window).scrollTop();
-		if(height>60){
-			$("#header").addClass("fixed");
-		}else{
-			$("#header").removeClass("fixed");
-		}
+    
 	});
 
-
-	var w;
-	$(".tab").click(function(e){
+	tabBtn.addEventListener("click", e=>{
 		e.preventDefault();
-		$(this).toggleClass("active");
-		$("#gnb").toggleClass("active");
-		$("body").toggleClass("fixed"); 
-    $("#gnb ul ul").slideUp();
+		e.currentTarget.classList.toggle("active");
+		body.classList.toggle("fixed");
+		gnb.classList.toggle("active");
+
+	});
+	// gnb interface
+	for(let i=0; i<gnbLi.length; i++){
+		gnbLi[i].index=i;
+		gnbLi[i].addEventListener("click", e=>{
+			e.preventDefault();
+			let index = e.currentTarget.index;
+
+			for(let j=0; j<gnbLi.length; j++){
+				let n = index;
+				let ul = gnbLi[j].lastElementChild;
+				if(n == j){
+					ul.classList.add("actvie");
+					ul.style.display="block";
+					gsap.to(ul,{duration:0.3, opacity:1})
+				}else{
+					ul.classList.remove("actvie");
+					ul.style.display="none";
+					gsap.to(ul,{duration:0.3, opacity:0})
+				}
+			}
+		})
+	}
+
+	letterBtn.addEventListener("click",e=>{
+		e.preventDefault();
+		height= window.pageYOffset;
 		
-		if($('#gnb ul ul').hasClass("active")==true){
-			$("#gnb ul ul").removeClass("active");
-		}
-		if($(".book").hasClass("active")==true){
-			$(".book").removeClass("active");
-			$(".main_text").removeClass("active");
-		}
+		if(height > 1) {
+			html.scrollTo({
+				top:0,
+				behavior:"smooth"
+			})
+		};
+
+		letter.classList.add("active");
+		body.classList.add("fixed");
+		body.style.touchAction="none";
 	});
 
-	$("#gnb>ul>li").click(function(e){
+	memberBtn.addEventListener("click",e=>{
 		e.preventDefault();
+		height= window.pageYOffset;
+		
+		if(height > 1) {
+			html.scrollTo({
+				top:0,
+				behavior:"smooth"
+			})
+		};
 
-		if($(this).find("ul").is(":visible") == false){
-			$("#gnb ul ul").slideUp();
-			$(this).find("ul").slideDown();
-		}
-		else{
-			$(this).find("ul").slideUp();
-		}
+		member.classList.add("active");
+		body.classList.add("fixed");
+		body.style.touchAction="none";
 	});
 
-
-  $(".utils .button .letter_btn a").click(function(e){
-    e.preventDefault();
-	height=$(window).scrollTop();
-	if(height >1){
-		$("html").animate({scrollTop: 0},100);
-	}
-    $(".utils .form .letter").addClass("active");
-		$("body").addClass("fixed");
-		$("body").css({touchAction:"none"})
+	letterCloseBtn.addEventListener("click", e=>{
+		e.preventDefault();
+		close();
+	});
+	memberCloseBtn.addEventListener("click",e=>{
+		e.preventDefault();
+		close();
+	})
 	
-  });
-  $(".utils .button .member_btn a").click(function(e){
-    e.preventDefault();
-	height=$(window).scrollTop();
-	if(height >1){
-		$("html").animate({scrollTop: 0},100);
+	function close(){
+		letter.classList.remove("active");
+		member.classList.remove("active");
+		body.classList.remove("fixed");
+		body.style.touchAction="auto";
 	}
-    $(".utils .form .member").addClass("active");
-	$("body").addClass("fixed"); 
-  });
-  $(".utils .form .close a").click(function(e){
-    e.preventDefault();
-    $(".utils .form .member").removeClass("active");
-    $(".utils .form .letter").removeClass("active");
-	$("body").removeClass("fixed"); 
-  });
-	
 
-
-
-
-  var donorSwiper = new Swiper("#donor_slider .mySwiper", {
+	let donorSwiper = new Swiper(donor_swiper, {
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -132,7 +127,7 @@ $(function(){
     },
   });
 
-  var event_swiper=new Swiper("#event_slider .mySwiper", {
+  let eventSwiper=new Swiper(event_swiper, {
 		slidesPerView: 1.5,
 		spaceBetween: 10,
 		pagination: {
@@ -150,18 +145,4 @@ $(function(){
 			},
 		},
 	});
-	function initMap(){
-		const myLatLng={lat: -25.363, lng: 131.044};
-		const map=new google.maps.Map(document.getElementById("map"), {
-			zoom: 18,
-			center: myLatLng,
-		});
-		new google.maps.Marker({
-			position: myLatLng,
-			map,
-			title: "Hello World!",
-		});
-	}
-	let vh = window.innerHeight;
-	$("#main_slider .swiper").css({height:vh});
 })
