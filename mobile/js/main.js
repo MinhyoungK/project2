@@ -4,7 +4,7 @@ $(function(){
 
   var mainSwiper = new Swiper("#main_slider .swiper", {
     speed:1200,
-	effect: "fade",
+		effect: "fade",
     fadeEffect:{
       crossFade:true
     },
@@ -167,4 +167,6 @@ $(function(){
 			title: "Hello World!",
 		});
 	}
+	let vh = window.innerHeight;
+	$("#main_slider .swiper").css({height:vh});
 })
