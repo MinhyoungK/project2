@@ -267,7 +267,13 @@ bottom: 100px;
 		bottom: 18.5%;
 	}
 }
-
+.utils{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 10;
+	height: 50px;
+}
 .utils .button .letter_btn{
 	position: absolute;
 	bottom: 0;
