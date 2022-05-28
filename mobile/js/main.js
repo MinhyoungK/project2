@@ -98,7 +98,7 @@ $(function(){
 	}
     $(".utils .form .letter").addClass("active");
 		$("body").addClass("fixed");
-
+		$("body").css({touchAction:"none"})
 	
   });
   $(".utils .button .member_btn a").click(function(e){
