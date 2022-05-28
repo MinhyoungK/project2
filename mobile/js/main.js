@@ -76,13 +76,7 @@ $(function(){
 			$(".main_text").removeClass("active");
 		}
 	});
-	// $(window).resize(function(){
-	// 	w=window.innerWidth;
-	// 	if(w > 600 && $("#gnb").hasClass("active")){
-	// 		$("#gnb").removeClass("active");
-	// 		$("#header .tab").removeClass("active");
-	// 	}
-	// });
+
 	$("#gnb>ul>li").click(function(e){
 		e.preventDefault();
 
@@ -103,7 +97,8 @@ $(function(){
 		$("html").animate({scrollTop: 0},100);
 	}
     $(".utils .form .letter").addClass("active");
-	$("body").addClass("fixed");
+		$("body").addClass("fixed");
+
 	
   });
   $(".utils .button .member_btn a").click(function(e){

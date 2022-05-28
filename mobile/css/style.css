@@ -166,10 +166,9 @@ display: block;
 position: absolute;
 left: 50%;
 top: 50%;
-/* width: 30vw; */
 text-align: center;
 transform: translate(-50%,-50%);
-z-index: 100;
+/* z-index: 100; */
 }
 
 .main_text .slogan strong{
@@ -194,7 +193,7 @@ width: 60vw;
 	position: relative;
 }
 #main_slider .swiper{
-height: 100vh;
+	z-index: -1;
 }
 
 #main_slider .swiper .swiper-slide {
@@ -304,6 +303,8 @@ bottom: 100px;
 }
 .utils .form .letter{
 	display: none;
+	position: absolute;
+	/* top: -100vh; */
 }
 .utils .form .member{
 	display: none;
@@ -318,7 +319,7 @@ bottom: 100px;
 	height: 20px;
 	z-index: 2000;
 	right: 50px;
-	bottom: 20PX;
+	bottom: 70PX;
 	background: url(../images/arrow_btn.png)no-repeat 100px 3px;
 	text-align: left;
 }
@@ -331,11 +332,11 @@ bottom: 100px;
 
 .utils >.form >div{
 	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
+	width: 100%;
+	height: 100vh;
 	bottom: 0;
-	padding: 120px 20px;
+	padding: 150px 20px;
+	box-sizing: border-box;
 	background-color: rgba(80, 80, 80, .95);
 	z-index: 1100;
 	text-align: center;
