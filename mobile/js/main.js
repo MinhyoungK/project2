@@ -20,9 +20,7 @@ window.addEventListener("load",()=>{
 	let donor_swiper= donorSlider.querySelector(".mySwiper");
 	let eventSlider= document.querySelector("#event_slider");
 	let event_swiper= eventSlider.querySelector(".mySwiper");
-	let vh = window.innerHeight;
 
-	main_swiper.style.height=vh+"px";
 
 	// main swiper
 	let mainSwiper = new Swiper(main_swiper, {

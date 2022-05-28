@@ -20,21 +20,21 @@ background-color: rgba(95, 50, 120, 0.6);
 position: absolute;
 left: 20px;
 top: 18px;
-z-index: 100;
+z-index: 1000;
 }
 #header .logo a{
 font-family: 'Playfair Display SC', serif;
 font-style: italic;
 display: block;
 color: #fff;
-font-size: 1.063em;
+font-size: 0.813em;
 font-weight: 600;
 }
 #header .tab {
 display: block;
 position: absolute;
 right: 20px;
-top: 20px;
+top: 30px;
 width: 30px;
 height: 23px;
 z-index: 1000;
@@ -48,15 +48,15 @@ background-color: #fff;
 transition: 0.3s;
 }
 #header .tab span:nth-child(1) {
-width: 15px;
+width: 18px;
 }
 #header .tab span:nth-child(2) {
 top: 5px;
-width: 15px;
+width: 18px;
 }
 #header .tab span:nth-child(3) {
 top: 10px;
-width: 15px;
+width: 18px;
 }
 #header .tab.active span{
 	background-color: #000;
@@ -163,7 +163,7 @@ width: 60vw;
 }
 #main_slider .swiper{
 	z-index: -1;
-	/* height: 100vh; */
+	height: 100vh;
 }
 
 #main_slider .swiper .swiper-slide {
@@ -284,7 +284,7 @@ bottom: 100px;
 	height: 20px;
 	z-index: 2000;
 	right: 50px;
-	bottom: 70PX;
+	margin-top: 30px;
 	background: url(../images/arrow_btn.png)no-repeat 100px 3px;
 	text-align: left;
 }
