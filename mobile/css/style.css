@@ -19,7 +19,7 @@ background-color: rgba(95, 50, 120, 0.6);
 #header .logo{
 position: absolute;
 left: 20px;
-top: 18px;
+top: 8px;
 z-index: 1000;
 }
 #header .logo a{
@@ -34,7 +34,7 @@ font-weight: 600;
 display: block;
 position: absolute;
 right: 20px;
-top: 30px;
+top: 22px;
 width: 30px;
 height: 23px;
 z-index: 1000;
@@ -447,16 +447,20 @@ section .title p{
 	position: absolute;
 	bottom: 0;
 }
-
+#donor_slider .swiper .swiper-slide img{
+	display: block;
+	width: 100%;
+}
 #donor_slider .swiper .swiper-slide .desc{
 	position: absolute;
-	padding: 5px 0;
+	padding: 20px 0;
 	right: 0;
 	bottom: -25px;
 	width: 167px;
 	height:100px;
 	background-color: #fff;
 	box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
 }
 #donor_slider .swiper .swiper-slide .desc dt{
 	margin-top: 20px;

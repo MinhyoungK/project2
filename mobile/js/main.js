@@ -21,6 +21,12 @@ window.addEventListener("load",()=>{
 	let eventSlider= document.querySelector("#event_slider");
 	let event_swiper= eventSlider.querySelector(".mySwiper");
 
+	//header
+	window.addEventListener("scroll",()=>{
+		height= window.pageYOffset;
+		
+		(height > 1) ? header.classList.add("fixed") : header.classList.remove("fixed")
+	});
 
 	// main swiper
 	let mainSwiper = new Swiper(main_swiper, {
