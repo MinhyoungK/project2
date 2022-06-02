@@ -453,7 +453,7 @@ section .title p{
 }
 #donor_slider .swiper .swiper-slide .desc{
 	position: absolute;
-	padding: 20px 0;
+	padding: 10px 0;
 	right: 0;
 	bottom: -25px;
 	width: 167px;
