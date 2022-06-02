@@ -21,7 +21,6 @@ $(function(){
   $('#gnb li li:last-child a').focusout(function(){
     $(this).parent().parent().parent().removeClass("over");  
   }); 
-
     
     // main slider
   let swiper = new Swiper(".mySwiper", {

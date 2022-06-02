@@ -31,3 +31,12 @@ html, body {
 	--swiper-theme-color: #fff;
 	--swiper-pagination-bullet-inactive-color:#fff;
 	}
+
+	.clearfix::before,
+	.clearfix::after{
+		content: "";
+		display: block;
+	}
+	.clearfix::after{
+		clear: both;
+	}
